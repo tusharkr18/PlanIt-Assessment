@@ -1,0 +1,6 @@
+datasources:207ab7da21f04617499eecdc29e6f8266c8c117b
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:cc259d5dc3c462e1e1632eebd1b31ee102f9b730
+--suite Suites.contactPageTestSuite
+--suite Suites.shopPageTestSuite

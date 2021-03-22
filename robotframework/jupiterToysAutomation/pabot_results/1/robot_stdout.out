@@ -1,0 +1,16 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.shopPageTestSuite :: Test Cases Related to Shop Page                   
+==============================================================================
+Test_Case_04 :: Test Case to Add Product in Cart and validate the ... | PASS |
+------------------------------------------------------------------------------
+Suites.shopPageTestSuite :: Test Cases Related to Shop Page           | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/pabot_results/1/output.xml

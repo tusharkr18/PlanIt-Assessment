@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on darwin)" generated="20210320 16:36:59.281" rpa="false">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="shopPageTestSuite" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/shopPageTestSuite.robot">
+<test id="s1-s1-t1" name="Test_Case_04">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>%{PATH}</arg>
+</arguments>
+<msg timestamp="20210320 16:36:59.616" level="INFO">/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</msg>
+<status status="PASS" starttime="20210320 16:36:59.616" endtime="20210320 16:36:59.617"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources</arg>
+</arguments>
+<msg timestamp="20210320 16:36:59.617" level="INFO">/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources</msg>
+<status status="PASS" starttime="20210320 16:36:59.617" endtime="20210320 16:36:59.617"></status>
+</kw>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+</arguments>
+<msg timestamp="20210320 16:36:59.617" level="INFO">Environment variable 'PATH' set to value '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver'.</msg>
+<status status="PASS" starttime="20210320 16:36:59.617" endtime="20210320 16:36:59.617"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:36:59.616" endtime="20210320 16:36:59.617"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210320 16:36:59.618" level="INFO">Opening browser 'Chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210320 16:36:59.618" endtime="20210320 16:37:04.605"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210320 16:37:04.605" endtime="20210320 16:37:04.869"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:36:59.617" endtime="20210320 16:37:04.870"></status>
+</kw>
+<kw name="Navigate to Shop Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${shopPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:04.871" level="INFO">Clicking element '//*[@id='nav-shop']/a'.</msg>
+<status status="PASS" starttime="20210320 16:37:04.870" endtime="20210320 16:37:04.947"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:04.870" endtime="20210320 16:37:04.948"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210320 16:37:06.949" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210320 16:37:04.948" endtime="20210320 16:37:06.949"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:04.948" endtime="20210320 16:37:06.950"></status>
+</kw>
+<kw name="Add Product" library="ShopPageLib">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210320 16:37:06.951" level="INFO">${qtyIndex} = 0</msg>
+<status status="PASS" starttime="20210320 16:37:06.951" endtime="20210320 16:37:06.951"></status>
+</kw>
+<kw name="${product} IN [ @{PRODUCTS} ]" type="for">
+<kw name="${product} = Funny Cow" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:06.952" level="INFO">Funny Cow</msg>
+<status status="PASS" starttime="20210320 16:37:06.952" endtime="20210320 16:37:06.952"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:06.952" level="INFO">Funny Cow['2', '1']0</msg>
+<status status="PASS" starttime="20210320 16:37:06.952" endtime="20210320 16:37:06.953"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==1</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+<arg>ELSE IF</arg>
+<arg>${QTYs}[${qtyIndex}]&gt;1</arg>
+<arg>Custom Repeat Keyword</arg>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Custom Repeat Keyword" library="ShopPageLib">
+<arguments>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>${run}</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210320 16:37:06.955" level="INFO">Repeating keyword, round 1/2.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210320 16:37:06.955" level="INFO">Clicking element '//*[contains(text(),'Funny Cow')]/../p/a'.</msg>
+<status status="PASS" starttime="20210320 16:37:06.955" endtime="20210320 16:37:07.011"></status>
+</kw>
+<msg timestamp="20210320 16:37:07.011" level="INFO">Repeating keyword, round 2/2.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210320 16:37:07.011" level="INFO">Clicking element '//*[contains(text(),'Funny Cow')]/../p/a'.</msg>
+<status status="PASS" starttime="20210320 16:37:07.011" endtime="20210320 16:37:07.043"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:06.954" endtime="20210320 16:37:07.043"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:06.954" endtime="20210320 16:37:07.043"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:06.953" endtime="20210320 16:37:07.043"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210320 16:37:07.044" level="INFO">${qtyIndex} = 1</msg>
+<status status="PASS" starttime="20210320 16:37:07.044" endtime="20210320 16:37:07.044"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:06.951" endtime="20210320 16:37:07.044"></status>
+</kw>
+<kw name="${product} = Fluffy Bunny" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:07.045" level="INFO">Fluffy Bunny</msg>
+<status status="PASS" starttime="20210320 16:37:07.045" endtime="20210320 16:37:07.045"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:07.046" level="INFO">Fluffy Bunny['2', '1']1</msg>
+<status status="PASS" starttime="20210320 16:37:07.045" endtime="20210320 16:37:07.046"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==1</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+<arg>ELSE IF</arg>
+<arg>${QTYs}[${qtyIndex}]&gt;1</arg>
+<arg>Custom Repeat Keyword</arg>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210320 16:37:07.048" level="INFO">Clicking element '//*[contains(text(),'Fluffy Bunny')]/../p/a'.</msg>
+<status status="PASS" starttime="20210320 16:37:07.048" endtime="20210320 16:37:07.101"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:07.047" endtime="20210320 16:37:07.101"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210320 16:37:07.102" level="INFO">${qtyIndex} = 2</msg>
+<status status="PASS" starttime="20210320 16:37:07.101" endtime="20210320 16:37:07.102"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:07.044" endtime="20210320 16:37:07.102"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:06.951" endtime="20210320 16:37:07.102"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:06.950" endtime="20210320 16:37:07.102"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210320 16:37:17.105" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210320 16:37:07.103" endtime="20210320 16:37:17.106"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:07.103" endtime="20210320 16:37:17.106"></status>
+</kw>
+<kw name="Navigate to My Cart" library="ShopPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${navigateCart}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:17.108" level="INFO">Clicking element '//*[@class='icon icon-shopping-cart icon-white']'.</msg>
+<status status="PASS" starttime="20210320 16:37:17.107" endtime="20210320 16:37:17.177"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:17.106" endtime="20210320 16:37:17.177"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210320 16:37:19.179" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210320 16:37:17.178" endtime="20210320 16:37:19.180"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:17.178" endtime="20210320 16:37:19.180"></status>
+</kw>
+<kw name="Validate Cart Is Not Empty" library="ShopPageLib">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cartCountMsg}</arg>
+</arguments>
+<assign>
+<var>${msg1}</var>
+</assign>
+<msg timestamp="20210320 16:37:19.214" level="INFO">${msg1} = 3</msg>
+<status status="PASS" starttime="20210320 16:37:19.181" endtime="20210320 16:37:19.214"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${msg1}&gt;0</arg>
+<arg>Log Successful Cart</arg>
+<arg>${msg1}</arg>
+</arguments>
+<kw name="Log Successful Cart" library="ShopPageLib">
+<arguments>
+<arg>${msg1}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item Validated and ${msg} Item(s) present in Cart</arg>
+</arguments>
+<msg timestamp="20210320 16:37:19.216" level="INFO">Item Validated and 3 Item(s) present in Cart</msg>
+<status status="PASS" starttime="20210320 16:37:19.215" endtime="20210320 16:37:19.216"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:19.215" endtime="20210320 16:37:19.216"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:19.214" endtime="20210320 16:37:19.216"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:19.180" endtime="20210320 16:37:19.216"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.218" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210320 16:37:19.216" endtime="20210320 16:37:29.218"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:19.216" endtime="20210320 16:37:29.218"></status>
+</kw>
+<kw name="Validate Cart Data" library="ShopPageLib">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210320 16:37:29.220" level="INFO">${qtyIndex} = 0</msg>
+<status status="PASS" starttime="20210320 16:37:29.219" endtime="20210320 16:37:29.220"></status>
+</kw>
+<kw name="${product} IN [ @{PRODUCTS} ]" type="for">
+<kw name="${product} = Funny Cow" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.221" level="INFO">Funny Cow</msg>
+<status status="PASS" starttime="20210320 16:37:29.221" endtime="20210320 16:37:29.221"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.222" level="INFO">Funny Cow['2', '1']0</msg>
+<status status="PASS" starttime="20210320 16:37:29.221" endtime="20210320 16:37:29.222"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<assign>
+<var>${is visible}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.249" level="INFO">Element '//*[contains(text(),'Funny Cow')]' is displayed.</msg>
+<status status="PASS" starttime="20210320 16:37:29.223" endtime="20210320 16:37:29.249"></status>
+</kw>
+<msg timestamp="20210320 16:37:29.249" level="INFO">${is visible} = True</msg>
+<status status="PASS" starttime="20210320 16:37:29.222" endtime="20210320 16:37:29.249"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../td[3]/input</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${cartQty}</var>
+</assign>
+<msg timestamp="20210320 16:37:29.265" level="INFO">${cartQty} = 2</msg>
+<status status="PASS" starttime="20210320 16:37:29.249" endtime="20210320 16:37:29.265"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is visible}==True</arg>
+<arg>Log</arg>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.265" level="INFO">Item Funny Cow is present in My Cart</msg>
+<status status="PASS" starttime="20210320 16:37:29.265" endtime="20210320 16:37:29.266"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.265" endtime="20210320 16:37:29.266"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==${cartQty}</arg>
+<arg>Log</arg>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.266" level="INFO">Qty for Funny Cow in Input matches the value in Cart which is 2</msg>
+<status status="PASS" starttime="20210320 16:37:29.266" endtime="20210320 16:37:29.266"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.266" endtime="20210320 16:37:29.266"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210320 16:37:29.267" level="INFO">${qtyIndex} = 1</msg>
+<status status="PASS" starttime="20210320 16:37:29.267" endtime="20210320 16:37:29.267"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.220" endtime="20210320 16:37:29.267"></status>
+</kw>
+<kw name="${product} = Fluffy Bunny" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.267" level="INFO">Fluffy Bunny</msg>
+<status status="PASS" starttime="20210320 16:37:29.267" endtime="20210320 16:37:29.267"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.268" level="INFO">Fluffy Bunny['2', '1']1</msg>
+<status status="PASS" starttime="20210320 16:37:29.267" endtime="20210320 16:37:29.268"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<assign>
+<var>${is visible}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.291" level="INFO">Element '//*[contains(text(),'Fluffy Bunny')]' is displayed.</msg>
+<status status="PASS" starttime="20210320 16:37:29.268" endtime="20210320 16:37:29.291"></status>
+</kw>
+<msg timestamp="20210320 16:37:29.291" level="INFO">${is visible} = True</msg>
+<status status="PASS" starttime="20210320 16:37:29.268" endtime="20210320 16:37:29.291"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../td[3]/input</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${cartQty}</var>
+</assign>
+<msg timestamp="20210320 16:37:29.308" level="INFO">${cartQty} = 1</msg>
+<status status="PASS" starttime="20210320 16:37:29.291" endtime="20210320 16:37:29.308"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is visible}==True</arg>
+<arg>Log</arg>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.309" level="INFO">Item Fluffy Bunny is present in My Cart</msg>
+<status status="PASS" starttime="20210320 16:37:29.309" endtime="20210320 16:37:29.309"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.309" endtime="20210320 16:37:29.309"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==${cartQty}</arg>
+<arg>Log</arg>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<msg timestamp="20210320 16:37:29.310" level="INFO">Qty for Fluffy Bunny in Input matches the value in Cart which is 1</msg>
+<status status="PASS" starttime="20210320 16:37:29.310" endtime="20210320 16:37:29.310"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.309" endtime="20210320 16:37:29.310"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210320 16:37:29.310" level="INFO">${qtyIndex} = 2</msg>
+<status status="PASS" starttime="20210320 16:37:29.310" endtime="20210320 16:37:29.310"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.267" endtime="20210320 16:37:29.311"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.220" endtime="20210320 16:37:29.311"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.219" endtime="20210320 16:37:29.311"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210320 16:37:29.311" endtime="20210320 16:37:29.311"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210320 16:37:29.311" endtime="20210320 16:37:29.403"></status>
+</kw>
+<status status="PASS" starttime="20210320 16:37:29.311" endtime="20210320 16:37:29.403"></status>
+</kw>
+<doc>Test Case to Add Product in Cart and validate the same in My Cart Page</doc>
+<tags>
+<tag>smoke-p1</tag>
+</tags>
+<status status="PASS" starttime="20210320 16:36:59.615" endtime="20210320 16:37:29.403" critical="yes"></status>
+</test>
+<doc>Test Cases Related to Shop Page</doc>
+<status status="PASS" starttime="20210320 16:36:59.308" endtime="20210320 16:37:29.405"></status>
+</suite>
+<status status="PASS" starttime="20210320 16:36:59.282" endtime="20210320 16:37:29.407"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">smoke-p1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" id="s1-s1" name="shopPageTestSuite">Suites.shopPageTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

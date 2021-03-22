@@ -1,0 +1,20 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.contactPageTestSuite :: Test Cases related to Contact Page             
+==============================================================================
+Test_Case_01 :: Test Case to Validate the Contacts Page Mandatory ... | PASS |
+------------------------------------------------------------------------------
+Test_Case_02 :: Test Case to successfully submit Form and validate... | PASS |
+------------------------------------------------------------------------------
+Test_Case_03 :: Test Case to validate Error Message displayed for ... | PASS |
+------------------------------------------------------------------------------
+Suites.contactPageTestSuite :: Test Cases related to Contact Page     | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/pabot_results/0/output.xml

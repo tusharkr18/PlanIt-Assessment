@@ -1,0 +1,2275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 3.2.2 (Python 3.9.2 on darwin)" generated="20210322 13:02:45.312" rpa="false">
+<suite id="s1" name="JupiterToys">
+<suite id="s1-s1" name="Chrome" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment">
+<suite id="s1-s1-s1" name="Robotframework" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework">
+<suite id="s1-s1-s1-s1" name="jupiterToysAutomation" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation">
+<suite id="s1-s1-s1-s1-s1" name="contactPageTestSuite" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/contactPageTestSuite.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Test_Case_01">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+</arguments>
+<msg timestamp="20210322 12:57:08.585" level="INFO">Environment variable 'PATH' set to value '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver'.</msg>
+<status status="PASS" starttime="20210322 12:57:08.585" endtime="20210322 12:57:08.585"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:08.585" endtime="20210322 12:57:08.585"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:57:08.585" endtime="20210322 12:57:08.586"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:08.584" endtime="20210322 12:57:08.586"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:08.587" level="INFO">Opening browser 'Chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 12:57:08.586" endtime="20210322 12:57:13.447"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:57:13.448" endtime="20210322 12:57:14.597"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:08.586" endtime="20210322 12:57:14.598"></status>
+</kw>
+<kw name="Navigate to Contacts Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contactPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:14.600" level="INFO">Clicking element '//*[@id='nav-contact']/a'.</msg>
+<status status="PASS" starttime="20210322 12:57:14.599" endtime="20210322 12:57:16.687"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:14.598" endtime="20210322 12:57:16.688"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:57:18.692" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:57:16.689" endtime="20210322 12:57:18.692"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:16.688" endtime="20210322 12:57:18.692"></status>
+</kw>
+<kw name="Click CPSubmit" library="ContactPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submitXpath}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:18.694" level="INFO">Clicking element '//*[@class='form-actions']/a'.</msg>
+<status status="PASS" starttime="20210322 12:57:18.694" endtime="20210322 12:57:20.779"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:18.693" endtime="20210322 12:57:20.779"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:57:22.782" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:57:20.781" endtime="20210322 12:57:22.782"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:20.780" endtime="20210322 12:57:22.783"></status>
+</kw>
+<kw name="Validate Error Message" library="ErrorValidationLib">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[0]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:24.823" level="INFO">Element '//*[@id='message-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:57:22.784" endtime="20210322 12:57:24.823"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[1]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:26.865" level="INFO">Element '//*[@id='email-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:57:24.824" endtime="20210322 12:57:26.866"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[2]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:28.908" level="INFO">Element '//*[@id='forename-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:57:26.866" endtime="20210322 12:57:28.909"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${contactpageHeadErrMsg}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:30.948" level="INFO">Element '//*[@class='alert alert-error ng-scope']' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:57:28.909" endtime="20210322 12:57:30.948"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:22.783" endtime="20210322 12:57:30.949"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Error Message Displayed, enter the Mandatory Fields</arg>
+</arguments>
+<msg timestamp="20210322 12:57:30.950" level="INFO">Error Message Displayed, enter the Mandatory Fields</msg>
+<status status="PASS" starttime="20210322 12:57:30.949" endtime="20210322 12:57:30.950"></status>
+</kw>
+<kw name="Input Mandatory Fields In Contact Page" library="ContactPageLib">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstNameXpath}</arg>
+<arg>${cpTestData}[0]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:30.952" level="INFO">Typing text 'John' into text field '//*[@id='forename']'.</msg>
+<status status="PASS" starttime="20210322 12:57:30.951" endtime="20210322 12:57:34.102"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailXpath}</arg>
+<arg>${cpTestData}[1]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:34.103" level="INFO">Typing text 'test123@test.com' into text field '//*[@id='email']'.</msg>
+<status status="PASS" starttime="20210322 12:57:34.102" endtime="20210322 12:57:37.241"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtmessageXpath}</arg>
+<arg>${cpTestData}[2]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:37.243" level="INFO">Typing text 'This is Test Message' into text field 'id=message'.</msg>
+<status status="PASS" starttime="20210322 12:57:37.242" endtime="20210322 12:57:40.382"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:30.950" endtime="20210322 12:57:40.382"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:57:42.385" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:57:40.384" endtime="20210322 12:57:42.386"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:40.383" endtime="20210322 12:57:42.387"></status>
+</kw>
+<kw name="Validate No Error Message" library="ErrorValidationLib">
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[0]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:43.399" level="INFO">Element '//*[@id='message-err']' did not exist.</msg>
+<status status="PASS" starttime="20210322 12:57:42.388" endtime="20210322 12:57:43.400"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[1]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:44.416" level="INFO">Element '//*[@id='email-err']' did not exist.</msg>
+<status status="PASS" starttime="20210322 12:57:43.401" endtime="20210322 12:57:44.417"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[2]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:45.432" level="INFO">Element '//*[@id='forename-err']' did not exist.</msg>
+<status status="PASS" starttime="20210322 12:57:44.417" endtime="20210322 12:57:45.433"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${contactpageHeadErrMsg}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:46.451" level="INFO">Element '//*[@class='alert alert-error ng-scope']' did not exist.</msg>
+<status status="PASS" starttime="20210322 12:57:45.433" endtime="20210322 12:57:46.452"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:42.387" endtime="20210322 12:57:46.452"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:57:46.454" endtime="20210322 12:57:46.454"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:57:46.454" endtime="20210322 12:57:47.532"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:46.453" endtime="20210322 12:57:47.532"></status>
+</kw>
+<doc>Test Case to Validate the Contacts Page Mandatory Fields</doc>
+<tags>
+<tag>smoke-p2</tag>
+</tags>
+<status status="PASS" starttime="20210322 12:57:08.583" endtime="20210322 12:57:47.533" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Test_Case_02">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+</arguments>
+<msg timestamp="20210322 12:57:47.538" level="INFO">Environment variable 'PATH' set to value '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver'.</msg>
+<status status="PASS" starttime="20210322 12:57:47.537" endtime="20210322 12:57:47.538"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:47.537" endtime="20210322 12:57:47.538"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:57:47.538" endtime="20210322 12:57:47.538"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:47.536" endtime="20210322 12:57:47.538"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:47.540" level="INFO">Opening browser 'Chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 12:57:47.539" endtime="20210322 12:57:52.536"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:57:52.537" endtime="20210322 12:57:53.686"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:47.539" endtime="20210322 12:57:53.687"></status>
+</kw>
+<kw name="Navigate to Contacts Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contactPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 12:57:53.690" level="INFO">Clicking element '//*[@id='nav-contact']/a'.</msg>
+<status status="PASS" starttime="20210322 12:57:53.689" endtime="20210322 12:57:55.769"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:53.688" endtime="20210322 12:57:55.769"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:57:57.771" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:57:55.771" endtime="20210322 12:57:57.772"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:55.770" endtime="20210322 12:57:57.772"></status>
+</kw>
+<kw name="Input Mandatory Fields In Contact Page" library="ContactPageLib">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstNameXpath}</arg>
+<arg>${cpTestData}[0]</arg>
+</arguments>
+<msg timestamp="20210322 12:57:57.774" level="INFO">Typing text 'John' into text field '//*[@id='forename']'.</msg>
+<status status="PASS" starttime="20210322 12:57:57.773" endtime="20210322 12:58:00.966"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailXpath}</arg>
+<arg>${cpTestData}[1]</arg>
+</arguments>
+<msg timestamp="20210322 12:58:00.968" level="INFO">Typing text 'test123@test.com' into text field '//*[@id='email']'.</msg>
+<status status="PASS" starttime="20210322 12:58:00.966" endtime="20210322 12:58:04.092"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtmessageXpath}</arg>
+<arg>${cpTestData}[2]</arg>
+</arguments>
+<msg timestamp="20210322 12:58:04.094" level="INFO">Typing text 'This is Test Message' into text field 'id=message'.</msg>
+<status status="PASS" starttime="20210322 12:58:04.093" endtime="20210322 12:58:07.240"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:57:57.773" endtime="20210322 12:58:07.241"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:58:09.246" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:58:07.243" endtime="20210322 12:58:09.247"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:07.242" endtime="20210322 12:58:09.247"></status>
+</kw>
+<kw name="Click CPSubmit" library="ContactPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submitXpath}</arg>
+</arguments>
+<msg timestamp="20210322 12:58:09.249" level="INFO">Clicking element '//*[@class='form-actions']/a'.</msg>
+<status status="PASS" starttime="20210322 12:58:09.248" endtime="20210322 12:58:11.322"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:09.248" endtime="20210322 12:58:11.323"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210322 12:58:21.328" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210322 12:58:11.325" endtime="20210322 12:58:21.328"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:11.324" endtime="20210322 12:58:21.329"></status>
+</kw>
+<kw name="Validate Post Submit Message" library="ContactPageLib">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'Thanks ${cpTestData}[0]')]</arg>
+<arg>timeout=${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:58:21.330" endtime="20210322 12:58:23.373"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test for submitting the Feedback is Successful</arg>
+</arguments>
+<msg timestamp="20210322 12:58:23.374" level="INFO">Test for submitting the Feedback is Successful</msg>
+<status status="PASS" starttime="20210322 12:58:23.373" endtime="20210322 12:58:23.374"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:21.329" endtime="20210322 12:58:23.374"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:58:25.378" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:58:23.376" endtime="20210322 12:58:25.378"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:23.375" endtime="20210322 12:58:25.379"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:58:25.381" endtime="20210322 12:58:25.381"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:58:25.382" endtime="20210322 12:58:26.446"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:25.380" endtime="20210322 12:58:26.447"></status>
+</kw>
+<doc>Test Case to successfully submit Form and validate the Success Message</doc>
+<tags>
+<tag>smoke-p1</tag>
+</tags>
+<status status="PASS" starttime="20210322 12:57:47.535" endtime="20210322 12:58:26.447" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Test_Case_03">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+</arguments>
+<msg timestamp="20210322 12:58:26.451" level="INFO">Environment variable 'PATH' set to value '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver'.</msg>
+<status status="PASS" starttime="20210322 12:58:26.450" endtime="20210322 12:58:26.451"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:26.450" endtime="20210322 12:58:26.451"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:58:26.451" endtime="20210322 12:58:26.451"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:26.449" endtime="20210322 12:58:26.452"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 12:58:26.453" level="INFO">Opening browser 'Chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 12:58:26.453" endtime="20210322 12:58:31.312"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:58:31.313" endtime="20210322 12:58:32.462"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:26.452" endtime="20210322 12:58:32.462"></status>
+</kw>
+<kw name="Navigate to Contacts Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contactPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 12:58:32.465" level="INFO">Clicking element '//*[@id='nav-contact']/a'.</msg>
+<status status="PASS" starttime="20210322 12:58:32.464" endtime="20210322 12:58:34.544"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:32.463" endtime="20210322 12:58:34.545"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:58:36.547" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:58:34.546" endtime="20210322 12:58:36.548"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:34.546" endtime="20210322 12:58:36.548"></status>
+</kw>
+<kw name="Input Invalid Data" library="ContactPageLib">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstNameXpath}</arg>
+<arg>${cpTestData}[0]</arg>
+</arguments>
+<msg timestamp="20210322 12:58:36.550" level="INFO">Typing text 'John' into text field '//*[@id='forename']'.</msg>
+<status status="PASS" starttime="20210322 12:58:36.550" endtime="20210322 12:58:39.723"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailXpath}</arg>
+<arg>${cpTestData}[3]</arg>
+</arguments>
+<msg timestamp="20210322 12:58:39.725" level="INFO">Typing text 'test' into text field '//*[@id='email']'.</msg>
+<status status="PASS" starttime="20210322 12:58:39.724" endtime="20210322 12:58:42.842"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtmessageXpath}</arg>
+<arg>${cpTestData}[2]</arg>
+</arguments>
+<msg timestamp="20210322 12:58:42.844" level="INFO">Typing text 'This is Test Message' into text field 'id=message'.</msg>
+<status status="PASS" starttime="20210322 12:58:42.842" endtime="20210322 12:58:45.978"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:36.549" endtime="20210322 12:58:45.978"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:58:47.983" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:58:45.980" endtime="20210322 12:58:47.983"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:45.979" endtime="20210322 12:58:47.984"></status>
+</kw>
+<kw name="Validate Error(s) for Invalid Data" library="ErrorValidationLib">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[1]</arg>
+</arguments>
+<msg timestamp="20210322 12:58:50.028" level="INFO">Element '//*[@id='email-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:58:47.985" endtime="20210322 12:58:50.029"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${contactpageHeadErrMsg}</arg>
+</arguments>
+<msg timestamp="20210322 12:58:52.071" level="INFO">Element '//*[@class='alert alert-error ng-scope']' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:58:50.029" endtime="20210322 12:58:52.072"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test with Invalid Data Successful</arg>
+</arguments>
+<msg timestamp="20210322 12:58:52.073" level="INFO">Test with Invalid Data Successful</msg>
+<status status="PASS" starttime="20210322 12:58:52.072" endtime="20210322 12:58:52.073"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:47.984" endtime="20210322 12:58:52.073"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:58:52.075" endtime="20210322 12:58:52.075"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:58:52.076" endtime="20210322 12:58:53.145"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:52.074" endtime="20210322 12:58:53.145"></status>
+</kw>
+<doc>Test Case to validate Error Message displayed for Invalid Data</doc>
+<tags>
+<tag>smoke-p2</tag>
+</tags>
+<status status="PASS" starttime="20210322 12:58:26.448" endtime="20210322 12:58:53.145" critical="yes"></status>
+</test>
+<doc>Test Cases related to Contact Page</doc>
+<status status="PASS" starttime="20210322 12:57:08.319" endtime="20210322 12:58:53.147"></status>
+</suite>
+<suite id="s1-s1-s1-s1-s2" name="shopPageTestSuite" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/shopPageTestSuite.robot">
+<test id="s1-s1-s1-s1-s2-t1" name="Test_Case_04">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+</arguments>
+<msg timestamp="20210322 12:58:53.171" level="INFO">Environment variable 'PATH' set to value '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver:/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver'.</msg>
+<status status="PASS" starttime="20210322 12:58:53.171" endtime="20210322 12:58:53.171"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:53.170" endtime="20210322 12:58:53.171"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:58:53.171" endtime="20210322 12:58:53.172"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:53.170" endtime="20210322 12:58:53.172"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 12:58:53.173" level="INFO">Opening browser 'Chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 12:58:53.173" endtime="20210322 12:58:57.831"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:58:57.832" endtime="20210322 12:58:58.980"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:53.172" endtime="20210322 12:58:58.980"></status>
+</kw>
+<kw name="Navigate to Shop Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${shopPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 12:58:58.983" level="INFO">Clicking element '//*[@id='nav-shop']/a'.</msg>
+<status status="PASS" starttime="20210322 12:58:58.982" endtime="20210322 12:59:01.071"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:58:58.981" endtime="20210322 12:59:01.071"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:59:03.075" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:59:01.072" endtime="20210322 12:59:03.075"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:01.071" endtime="20210322 12:59:03.077"></status>
+</kw>
+<kw name="Add Product" library="ShopPageLib">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 12:59:03.079" level="INFO">${qtyIndex} = 0</msg>
+<status status="PASS" starttime="20210322 12:59:03.078" endtime="20210322 12:59:03.079"></status>
+</kw>
+<kw name="${product} IN [ @{PRODUCTS} ]" type="for">
+<kw name="${product} = Funny Cow" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:03.080" level="INFO">Funny Cow</msg>
+<status status="PASS" starttime="20210322 12:59:03.080" endtime="20210322 12:59:03.080"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:03.081" level="INFO">Funny Cow['2', '1']0</msg>
+<status status="PASS" starttime="20210322 12:59:03.081" endtime="20210322 12:59:03.081"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==1</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+<arg>ELSE IF</arg>
+<arg>${QTYs}[${qtyIndex}]&gt;1</arg>
+<arg>Custom Repeat Keyword</arg>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Custom Repeat Keyword" library="ShopPageLib">
+<arguments>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>${run}</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 12:59:03.084" level="INFO">Repeating keyword, round 1/2.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 12:59:03.084" level="INFO">Clicking element '//*[contains(text(),'Funny Cow')]/../p/a'.</msg>
+<status status="PASS" starttime="20210322 12:59:03.084" endtime="20210322 12:59:05.149"></status>
+</kw>
+<msg timestamp="20210322 12:59:05.149" level="INFO">Repeating keyword, round 2/2.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 12:59:05.150" level="INFO">Clicking element '//*[contains(text(),'Funny Cow')]/../p/a'.</msg>
+<status status="PASS" starttime="20210322 12:59:05.149" endtime="20210322 12:59:07.198"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:03.084" endtime="20210322 12:59:07.198"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:03.083" endtime="20210322 12:59:07.198"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:03.082" endtime="20210322 12:59:07.199"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 12:59:07.200" level="INFO">${qtyIndex} = 1</msg>
+<status status="PASS" starttime="20210322 12:59:07.199" endtime="20210322 12:59:07.200"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:03.080" endtime="20210322 12:59:07.200"></status>
+</kw>
+<kw name="${product} = Fluffy Bunny" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:07.201" level="INFO">Fluffy Bunny</msg>
+<status status="PASS" starttime="20210322 12:59:07.200" endtime="20210322 12:59:07.201"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:07.202" level="INFO">Fluffy Bunny['2', '1']1</msg>
+<status status="PASS" starttime="20210322 12:59:07.201" endtime="20210322 12:59:07.202"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==1</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+<arg>ELSE IF</arg>
+<arg>${QTYs}[${qtyIndex}]&gt;1</arg>
+<arg>Custom Repeat Keyword</arg>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 12:59:07.203" level="INFO">Clicking element '//*[contains(text(),'Fluffy Bunny')]/../p/a'.</msg>
+<status status="PASS" starttime="20210322 12:59:07.203" endtime="20210322 12:59:09.266"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:07.202" endtime="20210322 12:59:09.266"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 12:59:09.267" level="INFO">${qtyIndex} = 2</msg>
+<status status="PASS" starttime="20210322 12:59:09.266" endtime="20210322 12:59:09.267"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:07.200" endtime="20210322 12:59:09.267"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:03.079" endtime="20210322 12:59:09.267"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:03.077" endtime="20210322 12:59:09.267"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210322 12:59:19.270" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210322 12:59:09.269" endtime="20210322 12:59:19.270"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:09.268" endtime="20210322 12:59:19.270"></status>
+</kw>
+<kw name="Navigate to My Cart" library="ShopPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${navigateCart}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:19.272" level="INFO">Clicking element '//*[@class='icon icon-shopping-cart icon-white']'.</msg>
+<status status="PASS" starttime="20210322 12:59:19.272" endtime="20210322 12:59:21.355"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:19.271" endtime="20210322 12:59:21.356"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 12:59:23.359" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 12:59:21.357" endtime="20210322 12:59:23.359"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:21.356" endtime="20210322 12:59:23.359"></status>
+</kw>
+<kw name="Validate Cart Is Not Empty" library="ShopPageLib">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cartCountMsg}</arg>
+</arguments>
+<assign>
+<var>${msg1}</var>
+</assign>
+<msg timestamp="20210322 12:59:25.407" level="INFO">${msg1} = 3</msg>
+<status status="PASS" starttime="20210322 12:59:23.361" endtime="20210322 12:59:25.407"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${msg1}&gt;0</arg>
+<arg>Log Successful Cart</arg>
+<arg>${msg1}</arg>
+</arguments>
+<kw name="Log Successful Cart" library="ShopPageLib">
+<arguments>
+<arg>${msg1}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item Validated and ${msg} Item(s) present in Cart</arg>
+</arguments>
+<msg timestamp="20210322 12:59:25.410" level="INFO">Item Validated and 3 Item(s) present in Cart</msg>
+<status status="PASS" starttime="20210322 12:59:25.409" endtime="20210322 12:59:25.410"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:25.409" endtime="20210322 12:59:25.410"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:25.408" endtime="20210322 12:59:25.411"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:23.360" endtime="20210322 12:59:25.411"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210322 12:59:35.415" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210322 12:59:25.412" endtime="20210322 12:59:35.415"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:25.411" endtime="20210322 12:59:35.415"></status>
+</kw>
+<kw name="Validate Cart Data" library="ShopPageLib">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 12:59:35.417" level="INFO">${qtyIndex} = 0</msg>
+<status status="PASS" starttime="20210322 12:59:35.417" endtime="20210322 12:59:35.417"></status>
+</kw>
+<kw name="${product} IN [ @{PRODUCTS} ]" type="for">
+<kw name="${product} = Funny Cow" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:35.418" level="INFO">Funny Cow</msg>
+<status status="PASS" starttime="20210322 12:59:35.418" endtime="20210322 12:59:35.418"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:35.419" level="INFO">Funny Cow['2', '1']0</msg>
+<status status="PASS" starttime="20210322 12:59:35.419" endtime="20210322 12:59:35.419"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<assign>
+<var>${is visible}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<msg timestamp="20210322 12:59:37.458" level="INFO">Element '//*[contains(text(),'Funny Cow')]' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:59:35.420" endtime="20210322 12:59:37.458"></status>
+</kw>
+<msg timestamp="20210322 12:59:37.459" level="INFO">${is visible} = True</msg>
+<status status="PASS" starttime="20210322 12:59:35.420" endtime="20210322 12:59:37.459"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../td[3]/input</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${cartQty}</var>
+</assign>
+<msg timestamp="20210322 12:59:39.494" level="INFO">${cartQty} = 2</msg>
+<status status="PASS" starttime="20210322 12:59:37.459" endtime="20210322 12:59:39.494"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is visible}==True</arg>
+<arg>Log</arg>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<msg timestamp="20210322 12:59:39.496" level="INFO">Item Funny Cow is present in My Cart</msg>
+<status status="PASS" starttime="20210322 12:59:39.495" endtime="20210322 12:59:39.496"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:39.494" endtime="20210322 12:59:39.496"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==${cartQty}</arg>
+<arg>Log</arg>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:39.497" level="INFO">Qty for Funny Cow in Input matches the value in Cart which is 2</msg>
+<status status="PASS" starttime="20210322 12:59:39.497" endtime="20210322 12:59:39.497"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:39.496" endtime="20210322 12:59:39.497"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 12:59:39.498" level="INFO">${qtyIndex} = 1</msg>
+<status status="PASS" starttime="20210322 12:59:39.497" endtime="20210322 12:59:39.498"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:35.418" endtime="20210322 12:59:39.498"></status>
+</kw>
+<kw name="${product} = Fluffy Bunny" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:39.499" level="INFO">Fluffy Bunny</msg>
+<status status="PASS" starttime="20210322 12:59:39.498" endtime="20210322 12:59:39.499"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:39.499" level="INFO">Fluffy Bunny['2', '1']1</msg>
+<status status="PASS" starttime="20210322 12:59:39.499" endtime="20210322 12:59:39.499"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<assign>
+<var>${is visible}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<msg timestamp="20210322 12:59:41.543" level="INFO">Element '//*[contains(text(),'Fluffy Bunny')]' is displayed.</msg>
+<status status="PASS" starttime="20210322 12:59:39.500" endtime="20210322 12:59:41.543"></status>
+</kw>
+<msg timestamp="20210322 12:59:41.543" level="INFO">${is visible} = True</msg>
+<status status="PASS" starttime="20210322 12:59:39.500" endtime="20210322 12:59:41.543"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../td[3]/input</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${cartQty}</var>
+</assign>
+<msg timestamp="20210322 12:59:43.577" level="INFO">${cartQty} = 1</msg>
+<status status="PASS" starttime="20210322 12:59:41.544" endtime="20210322 12:59:43.577"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is visible}==True</arg>
+<arg>Log</arg>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<msg timestamp="20210322 12:59:43.579" level="INFO">Item Fluffy Bunny is present in My Cart</msg>
+<status status="PASS" starttime="20210322 12:59:43.579" endtime="20210322 12:59:43.579"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:43.578" endtime="20210322 12:59:43.579"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==${cartQty}</arg>
+<arg>Log</arg>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:43.581" level="INFO">Qty for Fluffy Bunny in Input matches the value in Cart which is 1</msg>
+<status status="PASS" starttime="20210322 12:59:43.581" endtime="20210322 12:59:43.581"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:43.580" endtime="20210322 12:59:43.581"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 12:59:43.582" level="INFO">${qtyIndex} = 2</msg>
+<status status="PASS" starttime="20210322 12:59:43.582" endtime="20210322 12:59:43.582"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:39.498" endtime="20210322 12:59:43.582"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:35.417" endtime="20210322 12:59:43.582"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:35.416" endtime="20210322 12:59:43.583"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:59:43.584" endtime="20210322 12:59:43.584"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:59:43.584" endtime="20210322 12:59:44.650"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:43.583" endtime="20210322 12:59:44.650"></status>
+</kw>
+<doc>Test Case to Add Product in Cart and validate the same in My Cart Page</doc>
+<tags>
+<tag>smoke-p1</tag>
+</tags>
+<status status="PASS" starttime="20210322 12:58:53.169" endtime="20210322 12:59:44.651" critical="yes"></status>
+</test>
+<doc>Test Cases Related to Shop Page</doc>
+<status status="PASS" starttime="20210322 12:58:53.152" endtime="20210322 12:59:44.652"></status>
+</suite>
+<status status="PASS" starttime="20210322 12:57:08.317" endtime="20210322 12:59:44.656"></status>
+</suite>
+<status status="PASS" starttime="20210322 12:57:08.315" endtime="20210322 12:59:44.659"></status>
+</suite>
+<status status="PASS" starttime="20210322 12:57:08.287" endtime="20210322 12:59:44.662"></status>
+</suite>
+<suite id="s1-s2" name="Safari" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment">
+<suite id="s1-s2-s1" name="Robotframework" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework">
+<suite id="s1-s2-s1-s1" name="jupiterToysAutomation" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation">
+<suite id="s1-s2-s1-s1-s1" name="contactPageTestSuite" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/contactPageTestSuite.robot">
+<test id="s1-s2-s1-s1-s1-t1" name="Test_Case_01">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<msg timestamp="20210322 12:59:45.570" level="INFO">Starting Safari Driver</msg>
+<status status="PASS" starttime="20210322 12:59:45.569" endtime="20210322 12:59:45.570"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:45.569" endtime="20210322 12:59:45.570"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 12:59:45.570" endtime="20210322 12:59:45.570"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:45.569" endtime="20210322 12:59:45.570"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 12:59:45.571" level="INFO">Opening browser 'Safari' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 12:59:45.571" endtime="20210322 13:00:09.217"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 13:00:09.218" endtime="20210322 13:00:10.317"></status>
+</kw>
+<status status="PASS" starttime="20210322 12:59:45.570" endtime="20210322 13:00:10.318"></status>
+</kw>
+<kw name="Navigate to Contacts Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contactPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 13:00:10.320" level="INFO">Clicking element '//*[@id='nav-contact']/a'.</msg>
+<status status="PASS" starttime="20210322 13:00:10.320" endtime="20210322 13:00:12.512"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:10.319" endtime="20210322 13:00:12.512"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:00:14.514" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:00:12.514" endtime="20210322 13:00:14.515"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:12.513" endtime="20210322 13:00:14.515"></status>
+</kw>
+<kw name="Click CPSubmit" library="ContactPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submitXpath}</arg>
+</arguments>
+<msg timestamp="20210322 13:00:14.517" level="INFO">Clicking element '//*[@class='form-actions']/a'.</msg>
+<status status="PASS" starttime="20210322 13:00:14.516" endtime="20210322 13:00:16.711"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:14.515" endtime="20210322 13:00:16.712"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:00:18.714" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:00:16.713" endtime="20210322 13:00:18.715"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:16.712" endtime="20210322 13:00:18.715"></status>
+</kw>
+<kw name="Validate Error Message" library="ErrorValidationLib">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[0]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:20.859" level="INFO">Element '//*[@id='message-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:00:18.717" endtime="20210322 13:00:20.860"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[1]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:22.967" level="INFO">Element '//*[@id='email-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:00:20.860" endtime="20210322 13:00:22.968"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[2]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:25.069" level="INFO">Element '//*[@id='forename-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:00:22.968" endtime="20210322 13:00:25.069"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${contactpageHeadErrMsg}</arg>
+</arguments>
+<msg timestamp="20210322 13:00:27.167" level="INFO">Element '//*[@class='alert alert-error ng-scope']' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:00:25.069" endtime="20210322 13:00:27.168"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:18.716" endtime="20210322 13:00:27.168"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Error Message Displayed, enter the Mandatory Fields</arg>
+</arguments>
+<msg timestamp="20210322 13:00:27.169" level="INFO">Error Message Displayed, enter the Mandatory Fields</msg>
+<status status="PASS" starttime="20210322 13:00:27.169" endtime="20210322 13:00:27.170"></status>
+</kw>
+<kw name="Input Mandatory Fields In Contact Page" library="ContactPageLib">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstNameXpath}</arg>
+<arg>${cpTestData}[0]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:27.172" level="INFO">Typing text 'John' into text field '//*[@id='forename']'.</msg>
+<status status="PASS" starttime="20210322 13:00:27.171" endtime="20210322 13:00:30.462"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailXpath}</arg>
+<arg>${cpTestData}[1]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:30.464" level="INFO">Typing text 'test123@test.com' into text field '//*[@id='email']'.</msg>
+<status status="PASS" starttime="20210322 13:00:30.463" endtime="20210322 13:00:33.962"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtmessageXpath}</arg>
+<arg>${cpTestData}[2]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:33.964" level="INFO">Typing text 'This is Test Message' into text field 'id=message'.</msg>
+<status status="PASS" starttime="20210322 13:00:33.963" endtime="20210322 13:00:37.508"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:27.170" endtime="20210322 13:00:37.509"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:00:39.512" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:00:37.511" endtime="20210322 13:00:39.512"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:37.510" endtime="20210322 13:00:39.513"></status>
+</kw>
+<kw name="Validate No Error Message" library="ErrorValidationLib">
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[0]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:40.562" level="INFO">Element '//*[@id='message-err']' did not exist.</msg>
+<status status="PASS" starttime="20210322 13:00:39.514" endtime="20210322 13:00:40.562"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[1]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:41.612" level="INFO">Element '//*[@id='email-err']' did not exist.</msg>
+<status status="PASS" starttime="20210322 13:00:40.562" endtime="20210322 13:00:41.613"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[2]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:42.663" level="INFO">Element '//*[@id='forename-err']' did not exist.</msg>
+<status status="PASS" starttime="20210322 13:00:41.613" endtime="20210322 13:00:42.663"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${contactpageHeadErrMsg}</arg>
+</arguments>
+<msg timestamp="20210322 13:00:43.715" level="INFO">Element '//*[@class='alert alert-error ng-scope']' did not exist.</msg>
+<status status="PASS" starttime="20210322 13:00:42.664" endtime="20210322 13:00:43.716"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:39.513" endtime="20210322 13:00:43.716"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:00:43.718" endtime="20210322 13:00:43.719"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 13:00:43.719" endtime="20210322 13:00:44.817"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:43.717" endtime="20210322 13:00:44.818"></status>
+</kw>
+<doc>Test Case to Validate the Contacts Page Mandatory Fields</doc>
+<tags>
+<tag>smoke-p2</tag>
+</tags>
+<status status="PASS" starttime="20210322 12:59:45.568" endtime="20210322 13:00:44.818" critical="yes"></status>
+</test>
+<test id="s1-s2-s1-s1-s1-t2" name="Test_Case_02">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<msg timestamp="20210322 13:00:44.822" level="INFO">Starting Safari Driver</msg>
+<status status="PASS" starttime="20210322 13:00:44.822" endtime="20210322 13:00:44.822"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:44.821" endtime="20210322 13:00:44.822"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:00:44.822" endtime="20210322 13:00:44.822"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:44.821" endtime="20210322 13:00:44.823"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 13:00:44.824" level="INFO">Opening browser 'Safari' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 13:00:44.823" endtime="20210322 13:00:48.158"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 13:00:48.159" endtime="20210322 13:00:49.212"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:44.823" endtime="20210322 13:00:49.213"></status>
+</kw>
+<kw name="Navigate to Contacts Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contactPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 13:00:49.215" level="INFO">Clicking element '//*[@id='nav-contact']/a'.</msg>
+<status status="PASS" starttime="20210322 13:00:49.214" endtime="20210322 13:00:51.465"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:49.213" endtime="20210322 13:00:51.465"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:00:53.468" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:00:51.467" endtime="20210322 13:00:53.469"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:51.466" endtime="20210322 13:00:53.469"></status>
+</kw>
+<kw name="Input Mandatory Fields In Contact Page" library="ContactPageLib">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstNameXpath}</arg>
+<arg>${cpTestData}[0]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:53.471" level="INFO">Typing text 'John' into text field '//*[@id='forename']'.</msg>
+<status status="PASS" starttime="20210322 13:00:53.471" endtime="20210322 13:00:56.808"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailXpath}</arg>
+<arg>${cpTestData}[1]</arg>
+</arguments>
+<msg timestamp="20210322 13:00:56.809" level="INFO">Typing text 'test123@test.com' into text field '//*[@id='email']'.</msg>
+<status status="PASS" starttime="20210322 13:00:56.809" endtime="20210322 13:01:00.258"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtmessageXpath}</arg>
+<arg>${cpTestData}[2]</arg>
+</arguments>
+<msg timestamp="20210322 13:01:00.259" level="INFO">Typing text 'This is Test Message' into text field 'id=message'.</msg>
+<status status="PASS" starttime="20210322 13:01:00.258" endtime="20210322 13:01:03.761"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:00:53.470" endtime="20210322 13:01:03.761"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:01:05.765" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:01:03.763" endtime="20210322 13:01:05.765"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:03.762" endtime="20210322 13:01:05.766"></status>
+</kw>
+<kw name="Click CPSubmit" library="ContactPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submitXpath}</arg>
+</arguments>
+<msg timestamp="20210322 13:01:05.768" level="INFO">Clicking element '//*[@class='form-actions']/a'.</msg>
+<status status="PASS" starttime="20210322 13:01:05.768" endtime="20210322 13:01:07.959"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:05.767" endtime="20210322 13:01:07.959"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210322 13:01:17.962" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210322 13:01:07.961" endtime="20210322 13:01:17.963"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:07.960" endtime="20210322 13:01:17.963"></status>
+</kw>
+<kw name="Validate Post Submit Message" library="ContactPageLib">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'Thanks ${cpTestData}[0]')]</arg>
+<arg>timeout=${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:01:17.965" endtime="20210322 13:01:25.112"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test for submitting the Feedback is Successful</arg>
+</arguments>
+<msg timestamp="20210322 13:01:25.113" level="INFO">Test for submitting the Feedback is Successful</msg>
+<status status="PASS" starttime="20210322 13:01:25.113" endtime="20210322 13:01:25.114"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:17.964" endtime="20210322 13:01:25.114"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:01:27.118" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:01:25.116" endtime="20210322 13:01:27.119"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:25.115" endtime="20210322 13:01:27.119"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:01:27.121" endtime="20210322 13:01:27.121"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 13:01:27.122" endtime="20210322 13:01:28.175"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:27.120" endtime="20210322 13:01:28.176"></status>
+</kw>
+<doc>Test Case to successfully submit Form and validate the Success Message</doc>
+<tags>
+<tag>smoke-p1</tag>
+</tags>
+<status status="PASS" starttime="20210322 13:00:44.819" endtime="20210322 13:01:28.176" critical="yes"></status>
+</test>
+<test id="s1-s2-s1-s1-s1-t3" name="Test_Case_03">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<msg timestamp="20210322 13:01:28.179" level="INFO">Starting Safari Driver</msg>
+<status status="PASS" starttime="20210322 13:01:28.179" endtime="20210322 13:01:28.179"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:28.178" endtime="20210322 13:01:28.179"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:01:28.179" endtime="20210322 13:01:28.180"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:28.178" endtime="20210322 13:01:28.180"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 13:01:28.181" level="INFO">Opening browser 'Safari' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 13:01:28.181" endtime="20210322 13:01:31.360"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 13:01:31.362" endtime="20210322 13:01:32.462"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:28.180" endtime="20210322 13:01:32.463"></status>
+</kw>
+<kw name="Navigate to Contacts Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contactPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 13:01:32.466" level="INFO">Clicking element '//*[@id='nav-contact']/a'.</msg>
+<status status="PASS" starttime="20210322 13:01:32.466" endtime="20210322 13:01:34.661"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:32.464" endtime="20210322 13:01:34.662"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:01:36.664" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:01:34.663" endtime="20210322 13:01:36.665"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:34.662" endtime="20210322 13:01:36.665"></status>
+</kw>
+<kw name="Input Invalid Data" library="ContactPageLib">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstNameXpath}</arg>
+<arg>${cpTestData}[0]</arg>
+</arguments>
+<msg timestamp="20210322 13:01:36.667" level="INFO">Typing text 'John' into text field '//*[@id='forename']'.</msg>
+<status status="PASS" starttime="20210322 13:01:36.667" endtime="20210322 13:01:39.959"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailXpath}</arg>
+<arg>${cpTestData}[3]</arg>
+</arguments>
+<msg timestamp="20210322 13:01:39.961" level="INFO">Typing text 'test' into text field '//*[@id='email']'.</msg>
+<status status="PASS" starttime="20210322 13:01:39.960" endtime="20210322 13:01:43.210"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtmessageXpath}</arg>
+<arg>${cpTestData}[2]</arg>
+</arguments>
+<msg timestamp="20210322 13:01:43.211" level="INFO">Typing text 'This is Test Message' into text field 'id=message'.</msg>
+<status status="PASS" starttime="20210322 13:01:43.210" endtime="20210322 13:01:46.663"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:36.666" endtime="20210322 13:01:46.664"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:01:48.667" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:01:46.665" endtime="20210322 13:01:48.667"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:46.664" endtime="20210322 13:01:48.668"></status>
+</kw>
+<kw name="Validate Error(s) for Invalid Data" library="ErrorValidationLib">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${errorMessageXpath}[1]</arg>
+</arguments>
+<msg timestamp="20210322 13:01:50.809" level="INFO">Element '//*[@id='email-err']' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:01:48.669" endtime="20210322 13:01:50.810"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${contactpageHeadErrMsg}</arg>
+</arguments>
+<msg timestamp="20210322 13:01:52.870" level="INFO">Element '//*[@class='alert alert-error ng-scope']' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:01:50.810" endtime="20210322 13:01:52.870"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test with Invalid Data Successful</arg>
+</arguments>
+<msg timestamp="20210322 13:01:52.871" level="INFO">Test with Invalid Data Successful</msg>
+<status status="PASS" starttime="20210322 13:01:52.871" endtime="20210322 13:01:52.871"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:48.668" endtime="20210322 13:01:52.872"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:01:52.874" endtime="20210322 13:01:52.874"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 13:01:52.874" endtime="20210322 13:01:53.967"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:52.873" endtime="20210322 13:01:53.968"></status>
+</kw>
+<doc>Test Case to validate Error Message displayed for Invalid Data</doc>
+<tags>
+<tag>smoke-p2</tag>
+</tags>
+<status status="PASS" starttime="20210322 13:01:28.177" endtime="20210322 13:01:53.968" critical="yes"></status>
+</test>
+<doc>Test Cases related to Contact Page</doc>
+<status status="PASS" starttime="20210322 12:59:45.278" endtime="20210322 13:01:53.970"></status>
+</suite>
+<suite id="s1-s2-s1-s1-s2" name="shopPageTestSuite" source="/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/shopPageTestSuite.robot">
+<test id="s1-s2-s1-s1-s2-t1" name="Test_Case_04">
+<kw name="Set Environment Path" library="CommonLib" type="setup">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser}"=="Chrome"</arg>
+<arg>Append To Environment Variable</arg>
+<arg>PATH</arg>
+<arg>/Users/deebasanober/eclipse-workspace/PlanIt-Assessment/robotframework/jupiterToysAutomation/Resources/../Driver</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser}"=="Safari"</arg>
+<arg>Log</arg>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Starting Safari Driver</arg>
+</arguments>
+<msg timestamp="20210322 13:01:53.992" level="INFO">Starting Safari Driver</msg>
+<status status="PASS" starttime="20210322 13:01:53.992" endtime="20210322 13:01:53.992"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:53.991" endtime="20210322 13:01:53.992"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:01:53.992" endtime="20210322 13:01:53.993"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:53.991" endtime="20210322 13:01:53.993"></status>
+</kw>
+<kw name="Open Browser To Page" library="CommonLib">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${Browser}</arg>
+</arguments>
+<msg timestamp="20210322 13:01:53.994" level="INFO">Opening browser 'Safari' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20210322 13:01:53.993" endtime="20210322 13:01:57.109"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 13:01:57.109" endtime="20210322 13:01:58.162"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:53.993" endtime="20210322 13:01:58.163"></status>
+</kw>
+<kw name="Navigate to Shop Page" library="HomePageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${shopPageHypXpath}</arg>
+</arguments>
+<msg timestamp="20210322 13:01:58.165" level="INFO">Clicking element '//*[@id='nav-shop']/a'.</msg>
+<status status="PASS" starttime="20210322 13:01:58.165" endtime="20210322 13:02:00.363"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:01:58.163" endtime="20210322 13:02:00.364"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:02:02.368" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:02:00.365" endtime="20210322 13:02:02.369"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:00.364" endtime="20210322 13:02:02.369"></status>
+</kw>
+<kw name="Add Product" library="ShopPageLib">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 13:02:02.371" level="INFO">${qtyIndex} = 0</msg>
+<status status="PASS" starttime="20210322 13:02:02.371" endtime="20210322 13:02:02.371"></status>
+</kw>
+<kw name="${product} IN [ @{PRODUCTS} ]" type="for">
+<kw name="${product} = Funny Cow" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:02.372" level="INFO">Funny Cow</msg>
+<status status="PASS" starttime="20210322 13:02:02.372" endtime="20210322 13:02:02.373"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:02.374" level="INFO">Funny Cow['2', '1']0</msg>
+<status status="PASS" starttime="20210322 13:02:02.373" endtime="20210322 13:02:02.374"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==1</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+<arg>ELSE IF</arg>
+<arg>${QTYs}[${qtyIndex}]&gt;1</arg>
+<arg>Custom Repeat Keyword</arg>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Custom Repeat Keyword" library="ShopPageLib">
+<arguments>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>${run}</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 13:02:02.377" level="INFO">Repeating keyword, round 1/2.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 13:02:02.377" level="INFO">Clicking element '//*[contains(text(),'Funny Cow')]/../p/a'.</msg>
+<status status="PASS" starttime="20210322 13:02:02.377" endtime="20210322 13:02:04.560"></status>
+</kw>
+<msg timestamp="20210322 13:02:04.561" level="INFO">Repeating keyword, round 2/2.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 13:02:04.563" level="INFO">Clicking element '//*[contains(text(),'Funny Cow')]/../p/a'.</msg>
+<status status="PASS" starttime="20210322 13:02:04.562" endtime="20210322 13:02:06.715"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:02.376" endtime="20210322 13:02:06.716"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:02.375" endtime="20210322 13:02:06.716"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:02.374" endtime="20210322 13:02:06.716"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 13:02:06.717" level="INFO">${qtyIndex} = 1</msg>
+<status status="PASS" starttime="20210322 13:02:06.716" endtime="20210322 13:02:06.717"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:02.372" endtime="20210322 13:02:06.717"></status>
+</kw>
+<kw name="${product} = Fluffy Bunny" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:06.718" level="INFO">Fluffy Bunny</msg>
+<status status="PASS" starttime="20210322 13:02:06.718" endtime="20210322 13:02:06.719"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:06.720" level="INFO">Fluffy Bunny['2', '1']1</msg>
+<status status="PASS" starttime="20210322 13:02:06.719" endtime="20210322 13:02:06.720"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==1</arg>
+<arg>Click Element</arg>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+<arg>ELSE IF</arg>
+<arg>${QTYs}[${qtyIndex}]&gt;1</arg>
+<arg>Custom Repeat Keyword</arg>
+<arg>${QTYs}[${qtyIndex}]</arg>
+<arg>${product}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../p/a</arg>
+</arguments>
+<msg timestamp="20210322 13:02:06.722" level="INFO">Clicking element '//*[contains(text(),'Fluffy Bunny')]/../p/a'.</msg>
+<status status="PASS" starttime="20210322 13:02:06.722" endtime="20210322 13:02:08.913"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:06.720" endtime="20210322 13:02:08.913"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 13:02:08.914" level="INFO">${qtyIndex} = 2</msg>
+<status status="PASS" starttime="20210322 13:02:08.914" endtime="20210322 13:02:08.915"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:06.718" endtime="20210322 13:02:08.915"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:02.371" endtime="20210322 13:02:08.915"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:02.370" endtime="20210322 13:02:08.915"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210322 13:02:18.920" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210322 13:02:08.916" endtime="20210322 13:02:18.920"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:08.915" endtime="20210322 13:02:18.921"></status>
+</kw>
+<kw name="Navigate to My Cart" library="ShopPageLib">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${navigateCart}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:18.923" level="INFO">Clicking element '//*[@class='icon icon-shopping-cart icon-white']'.</msg>
+<status status="PASS" starttime="20210322 13:02:18.922" endtime="20210322 13:02:21.114"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:18.921" endtime="20210322 13:02:21.115"></status>
+</kw>
+<kw name="Normal Sleep" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210322 13:02:23.120" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 13:02:21.116" endtime="20210322 13:02:23.120"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:21.116" endtime="20210322 13:02:23.121"></status>
+</kw>
+<kw name="Validate Cart Is Not Empty" library="ShopPageLib">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cartCountMsg}</arg>
+</arguments>
+<assign>
+<var>${msg1}</var>
+</assign>
+<msg timestamp="20210322 13:02:25.221" level="INFO">${msg1} = 3</msg>
+<status status="PASS" starttime="20210322 13:02:23.122" endtime="20210322 13:02:25.221"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${msg1}&gt;0</arg>
+<arg>Log Successful Cart</arg>
+<arg>${msg1}</arg>
+</arguments>
+<kw name="Log Successful Cart" library="ShopPageLib">
+<arguments>
+<arg>${msg1}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item Validated and ${msg} Item(s) present in Cart</arg>
+</arguments>
+<msg timestamp="20210322 13:02:25.224" level="INFO">Item Validated and 3 Item(s) present in Cart</msg>
+<status status="PASS" starttime="20210322 13:02:25.224" endtime="20210322 13:02:25.224"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:25.223" endtime="20210322 13:02:25.225"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:25.222" endtime="20210322 13:02:25.225"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:23.121" endtime="20210322 13:02:25.225"></status>
+</kw>
+<kw name="Big Sleep for Element Load" library="CommonLib">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210322 13:02:35.232" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210322 13:02:25.227" endtime="20210322 13:02:35.232"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:25.226" endtime="20210322 13:02:35.233"></status>
+</kw>
+<kw name="Validate Cart Data" library="ShopPageLib">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 13:02:35.234" level="INFO">${qtyIndex} = 0</msg>
+<status status="PASS" starttime="20210322 13:02:35.234" endtime="20210322 13:02:35.234"></status>
+</kw>
+<kw name="${product} IN [ @{PRODUCTS} ]" type="for">
+<kw name="${product} = Funny Cow" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:35.236" level="INFO">Funny Cow</msg>
+<status status="PASS" starttime="20210322 13:02:35.235" endtime="20210322 13:02:35.236"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:35.237" level="INFO">Funny Cow['2', '1']0</msg>
+<status status="PASS" starttime="20210322 13:02:35.236" endtime="20210322 13:02:35.237"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<assign>
+<var>${is visible}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<msg timestamp="20210322 13:02:37.369" level="INFO">Element '//*[contains(text(),'Funny Cow')]' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:02:35.238" endtime="20210322 13:02:37.369"></status>
+</kw>
+<msg timestamp="20210322 13:02:37.369" level="INFO">${is visible} = True</msg>
+<status status="PASS" starttime="20210322 13:02:35.237" endtime="20210322 13:02:37.369"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../td[3]/input</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${cartQty}</var>
+</assign>
+<msg timestamp="20210322 13:02:39.477" level="INFO">${cartQty} = 2</msg>
+<status status="PASS" starttime="20210322 13:02:37.370" endtime="20210322 13:02:39.477"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is visible}==True</arg>
+<arg>Log</arg>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<msg timestamp="20210322 13:02:39.479" level="INFO">Item Funny Cow is present in My Cart</msg>
+<status status="PASS" starttime="20210322 13:02:39.478" endtime="20210322 13:02:39.479"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:39.477" endtime="20210322 13:02:39.479"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==${cartQty}</arg>
+<arg>Log</arg>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:39.481" level="INFO">Qty for Funny Cow in Input matches the value in Cart which is 2</msg>
+<status status="PASS" starttime="20210322 13:02:39.480" endtime="20210322 13:02:39.481"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:39.479" endtime="20210322 13:02:39.481"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 13:02:39.482" level="INFO">${qtyIndex} = 1</msg>
+<status status="PASS" starttime="20210322 13:02:39.481" endtime="20210322 13:02:39.482"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:35.235" endtime="20210322 13:02:39.482"></status>
+</kw>
+<kw name="${product} = Fluffy Bunny" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:39.483" level="INFO">Fluffy Bunny</msg>
+<status status="PASS" starttime="20210322 13:02:39.482" endtime="20210322 13:02:39.483"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product}@{QTYs}${qtyIndex}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:39.484" level="INFO">Fluffy Bunny['2', '1']1</msg>
+<status status="PASS" starttime="20210322 13:02:39.483" endtime="20210322 13:02:39.484"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<assign>
+<var>${is visible}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]</arg>
+</arguments>
+<msg timestamp="20210322 13:02:41.577" level="INFO">Element '//*[contains(text(),'Fluffy Bunny')]' is displayed.</msg>
+<status status="PASS" starttime="20210322 13:02:39.484" endtime="20210322 13:02:41.577"></status>
+</kw>
+<msg timestamp="20210322 13:02:41.577" level="INFO">${is visible} = True</msg>
+<status status="PASS" starttime="20210322 13:02:39.484" endtime="20210322 13:02:41.577"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'${product}')]/../td[3]/input</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${cartQty}</var>
+</assign>
+<msg timestamp="20210322 13:02:43.677" level="INFO">${cartQty} = 1</msg>
+<status status="PASS" starttime="20210322 13:02:41.578" endtime="20210322 13:02:43.677"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is visible}==True</arg>
+<arg>Log</arg>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item ${product} is present in My Cart</arg>
+</arguments>
+<msg timestamp="20210322 13:02:43.679" level="INFO">Item Fluffy Bunny is present in My Cart</msg>
+<status status="PASS" starttime="20210322 13:02:43.678" endtime="20210322 13:02:43.679"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:43.677" endtime="20210322 13:02:43.679"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${QTYs}[${qtyIndex}]==${cartQty}</arg>
+<arg>Log</arg>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Qty for ${product} in Input matches the value in Cart which is ${cartQty}</arg>
+</arguments>
+<msg timestamp="20210322 13:02:43.681" level="INFO">Qty for Fluffy Bunny in Input matches the value in Cart which is 1</msg>
+<status status="PASS" starttime="20210322 13:02:43.680" endtime="20210322 13:02:43.681"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:43.679" endtime="20210322 13:02:43.681"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${qtyIndex}+1</arg>
+</arguments>
+<assign>
+<var>${qtyIndex}</var>
+</assign>
+<msg timestamp="20210322 13:02:43.682" level="INFO">${qtyIndex} = 2</msg>
+<status status="PASS" starttime="20210322 13:02:43.681" endtime="20210322 13:02:43.682"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:39.482" endtime="20210322 13:02:43.682"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:35.234" endtime="20210322 13:02:43.682"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:35.233" endtime="20210322 13:02:43.683"></status>
+</kw>
+<kw name="Test Closure" library="CommonLib" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Take Screenshot for Failure</arg>
+</arguments>
+<status status="PASS" starttime="20210322 13:02:43.684" endtime="20210322 13:02:43.684"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 13:02:43.684" endtime="20210322 13:02:44.771"></status>
+</kw>
+<status status="PASS" starttime="20210322 13:02:43.683" endtime="20210322 13:02:44.771"></status>
+</kw>
+<doc>Test Case to Add Product in Cart and validate the same in My Cart Page</doc>
+<tags>
+<tag>smoke-p1</tag>
+</tags>
+<status status="PASS" starttime="20210322 13:01:53.990" endtime="20210322 13:02:44.771" critical="yes"></status>
+</test>
+<doc>Test Cases Related to Shop Page</doc>
+<status status="PASS" starttime="20210322 13:01:53.974" endtime="20210322 13:02:44.773"></status>
+</suite>
+<status status="PASS" starttime="20210322 12:59:45.275" endtime="20210322 13:02:44.776"></status>
+</suite>
+<status status="PASS" starttime="20210322 12:59:45.273" endtime="20210322 13:02:44.781"></status>
+</suite>
+<status status="PASS" starttime="20210322 12:59:45.239" endtime="20210322 13:02:44.784"></status>
+</suite>
+<status status="PASS" starttime="N/A" endtime="N/A" elapsedtime="335920"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0">smoke-p1</stat>
+<stat pass="4" fail="0">smoke-p2</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="JupiterToys">JupiterToys</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Chrome">JupiterToys.Chrome</stat>
+<stat pass="4" fail="0" id="s1-s1-s1" name="Robotframework">JupiterToys.Chrome.Robotframework</stat>
+<stat pass="4" fail="0" id="s1-s1-s1-s1" name="jupiterToysAutomation">JupiterToys.Chrome.Robotframework.jupiterToysAutomation</stat>
+<stat pass="3" fail="0" id="s1-s1-s1-s1-s1" name="contactPageTestSuite">JupiterToys.Chrome.Robotframework.jupiterToysAutomation.contactPageTestSuite</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s2" name="shopPageTestSuite">JupiterToys.Chrome.Robotframework.jupiterToysAutomation.shopPageTestSuite</stat>
+<stat pass="4" fail="0" id="s1-s2" name="Safari">JupiterToys.Safari</stat>
+<stat pass="4" fail="0" id="s1-s2-s1" name="Robotframework">JupiterToys.Safari.Robotframework</stat>
+<stat pass="4" fail="0" id="s1-s2-s1-s1" name="jupiterToysAutomation">JupiterToys.Safari.Robotframework.jupiterToysAutomation</stat>
+<stat pass="3" fail="0" id="s1-s2-s1-s1-s1" name="contactPageTestSuite">JupiterToys.Safari.Robotframework.jupiterToysAutomation.contactPageTestSuite</stat>
+<stat pass="1" fail="0" id="s1-s2-s1-s1-s2" name="shopPageTestSuite">JupiterToys.Safari.Robotframework.jupiterToysAutomation.shopPageTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
