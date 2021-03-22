@@ -19,13 +19,14 @@ This Project is build in Robot Framework with Python Intepretor and Selenium Lib
 
 **Steps to be Performed**
 - Clone the Project to Local using Git Hub URL
-- Once the Project is cloned, navigate to cmd/Termial \
+- Once the Project is cloned, navigate to cmd/Termial
 - Navigate Project Folder and run the command - robot . ( it will execute all the test cases in this project)
 - If you want to execute selective Suites using different variable below are few useful commands
 -   robot --name <name> robotframework/jupiterToysAutomation/contactPageTestSuite.robot
 -   robot --variable Browser:<Browser> . eg Browser:Chrome, Browser:Safari
 - Please open the Log.html in root folder to check the Execution Report
 - Robot Bat command file has been included as well. Please modify it if anhythin else is required
+- Alternatively you can import the Project in IDE/RIDE and can execute the test using Run Configuration
 
 Happy Testing...!!!!
 
